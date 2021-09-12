@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './componenet/Auth/Header';
+import store from "./Redux/store";
+import { Provider } from "react-redux";
+import ListUser from './componenet/Auth/ListUser/ListUser';
+import ListEmployee from './componenet/Auth/ListEmployee/listEmployee';
+import { Link, Route} from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Provider store={store}>
+    <div>
+    <Header/> 
+   <Link to="/"> Admin</Link>
+   <link to="/ListEmployee"> Employee</link>
+    
+
+
+    <Route exact path="/" component={ListUser}/>
+    <Route path="/ListEmployee" component={ListEmployee}/>
+ 
     </div>
+     
+    
+  
+
+     </Provider>
   );
 }
 

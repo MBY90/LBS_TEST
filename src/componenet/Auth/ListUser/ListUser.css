@@ -1,0 +1,29 @@
+.listAdmin {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    flex:1
+
+}
+th{
+    position: absolute;
+width: 165px;
+height: 17px;
+left: 217px;
+top: 314px;
+
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+text-transform: capitalize;
+
+/* Gray 4 */
+
+color: #BDBDBD;
+}
